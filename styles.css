@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    background-color: #fbfbfb;
+}
+
+header {
+    display: block;
+    align-items: center;
+    padding: 1em;
+    color: #333;
+    font-weight: bold;
+}
+
+ul {
+    padding: 1.5em 0;
+    list-style-type: none; 
+    text-align: center; 
+    list-style-position: inside;
+}
+
+li {
+    padding-bottom: 0.5em;
+}
+
+.employee-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 1em;
+    grid-column-gap: 0.5em;
+    margin: 0 1em;
+}
+
+.employee-card {
+    display: flex;
+    max-width: 415px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+.icon {
+    width: 128px;
+    margin: 1em;
+    border-radius: 64px;
+}
+
+.employee-name {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal-icon {
+    width: 128px;
+    border-radius: 64px;
+    display: block;
+    margin: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-card {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    width: 33%;
+}
+
+.modal-xbutton {
+    color: #000;
+    float: right;
+    font-size: 28px;
+}
+
+.employee-card:hover,
+.modal-xbutton:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px)  {
+    .employee-list {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 320px)  {
+    .employee-list {
+        grid-template-columns: auto;
+    }
+}
